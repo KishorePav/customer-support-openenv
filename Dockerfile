@@ -5,16 +5,12 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# install uv
 RUN pip install uv
 
-# copy dependency files first (for caching)
 COPY pyproject.toml uv.lock ./
 
-# install deps
 RUN uv sync --frozen
 
-# copy rest of code
 COPY . .
 
 EXPOSE 8000

@@ -144,9 +144,6 @@ class SupportTriageEnvironment(Environment):
     def state(self) -> SupportState:
         return self._state
 
-    # -------------------------
-    # Internal helpers
-    # -------------------------
 
     def _select_task(
         self,
