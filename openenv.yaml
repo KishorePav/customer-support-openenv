@@ -1,0 +1,30 @@
+name: customer-support-openenv
+version: 1.0.0
+
+description: |
+  A customer support triage environment where an agent must classify incoming
+  support cases, assign priority, route them to the correct team, and choose
+  the safest next action.
+
+endpoints:
+  reset: /reset
+  step: /step
+  state: /state
+  tasks: /tasks
+
+models:
+  action: SupportAction
+  observation: SupportObservation
+  state: SupportState
+  reward: Reward
+
+tasks:
+  - easy_001
+  - easy_002
+  - easy_003
+  - medium_001
+  - medium_002
+  - medium_003
+  - hard_001
+  - hard_002
+  - hard_003
